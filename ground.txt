@@ -1,0 +1,97 @@
+**
+ * This class user is used to store the data of users and to display accounts and clients
+ * @author  mariam mohamed mohamed aboelfadl
+ * @author  aya gamal mohamed hussien
+ * @author  mohamed foda
+ * @version 1.0
+ * @since 11-6-2021
+ */
+import java.util.ArrayList;
+
+public class ground {
+	/**
+     * This class has 5 parameters
+     * @param groundname used to store the name of the ground
+     * @param groundid used to store the snn of ground
+     * @param groundlocation used to store the address of the ground
+     * @param  groundprice  used to store the price of the ground
+     * @param slotsavaialable used to store the slotsavaialable  of the ground
+     *  This class has also 1 ArrayList
+     * type of the first list is string and called slots which used to store the slots of the ground 
+     
+     *
+     */
+		protected
+		int groundid;
+		String groundname;
+		String groundlocation;
+		String groundprice;
+		int slotsAvaialabe;
+		ArrayList <String> slots = new ArrayList<String> ();
+		
+		public
+                         /** setter for the groundid
+     * @param groundid used to store groundid of the ground
+     */ 
+		void setid(int groundid)
+		{
+		    this.groundid=groundid;
+		}
+                 /** setter for the groundname
+     * @param groundname used to store groundname of the ground
+     */ 
+		void setname(String groundname)
+		{
+		    this.groundname=groundname;
+		}
+                 /** setter for the groundlocation
+     * @param groundlocation used to store groundlocation of the ground
+     */ 
+		void setlocation(String groundlocation)
+		{
+		    this.groundlocation=groundlocation;
+		}
+                /** setter for the groundprice
+     * @param groundprice used to store groundprice of the ground
+     */  
+		void setprice(String groundprice)
+		{
+		    this.groundprice = groundprice;
+		}
+                 /**
+     * getter for the id
+     * @return id , a int contains the id value
+     */
+
+		int getid()
+		{
+		    return groundid;
+		}
+                 /**
+     * getter for the name
+     * @return name, a string contains the name value
+     */
+
+		String getname()
+		{
+		    return groundname;
+		}
+                 /**
+     * getter for the location
+     * @return location , a string contains the location value
+     */
+
+		String getlocation()
+		{
+		    return groundlocation;
+		}
+                 /**
+     * getter for the price
+     * @return price , a int contains the price value
+     */
+
+		String getprice()
+		{
+		    return groundprice;
+		}
+}

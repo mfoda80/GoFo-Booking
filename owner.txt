@@ -1,0 +1,63 @@
+/**
+ * This class user is used to store the data of users and to display accounts and clients
+ * @author  mariam mohamed mohamed aboelfadl
+ * @author  aya gamal mohamed hussien
+ * @author  mohamed foda
+ * @version 1.0
+ * @since 11-6-2021
+ */
+import java.util.Scanner;
+
+public class owner extends user
+{
+    /**
+     * This class has 1 function,1 constructor
+    
+     *  the first list is called  to add ground
+     * the second list is called  to set the data of owner and display it
+     *
+     */
+	public
+                    /**
+     * Parameterized constructor used to set the values of the class
+     * @param name used to store the name of the user
+     * @param id used to store the snn of user
+     * @param location used to store the address of the user
+     * @param  phonenum  used to store the phone number of the user
+     * @param password used to store the password of the user
+     *
+     */
+	   owner(int id,String name,String location,String phonenum,String password) {
+        super(id, name,location,phonenum,password);}
+
+		 public ground Ground = new ground();
+		 
+	    //add a Playground
+                 /**
+     * function called book which  have  parameters and add and display the slot and ground are available for owner
+     */
+		 public void addPlayground( int idground,String nameground,String locationground, String priceground) 
+	     {
+			 ground Ground = new ground();
+	    	 // Ground.groundid= idground;
+	    	 Ground.setid(idground);
+	    	 Ground.setname(nameground);
+	    	 Ground.setlocation(locationground);
+	         Ground.setprice (priceground);
+	         
+	         Scanner hold = new Scanner(System.in);
+	         Ground.slotsAvaialabe = hold.nextInt();
+             System.out.println("Enter Number of slots:");
+             for (int i= 0; i < Ground.slotsAvaialabe; i++) 
+             {
+            	 System.out.println("ENTER THE SLOT IN THE FORMAT: eg.: 04:00" + Ground.slots.get(i));           	      
+	      		   String slot = hold.nextLine();
+
+             }
+        	 System.out.println("You now have a playground wait to be approved by the adminstrator!:)");           	      
+             hold.close();
+	      }
+	     
+}
+
+

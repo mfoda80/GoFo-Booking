@@ -1,0 +1,217 @@
+/**
+ * This class user is used to store the data of users and to display accounts and clients
+ * @author  mariam mohamed mohamed aboelfadl
+ * @author  aya gamal mohamed hussien
+ * @author mohamed foda
+ * @version 1.0
+ * @since 11-6-2021
+ */
+
+import java.util.Scanner;
+
+public class user{
+    
+/**
+     * This class has 5 parameters
+     * @param name used to store the name of the user
+     * @param id used to store the snn of user
+     * @param location used to store the address of the user
+     * @param  phonenum  used to store the phone number of the user
+     * @param password used to store the password of the user
+     * This class has also 2 function
+     *  the first  called  to add playground
+     * the second list  called  to book playground
+     *
+     */
+        protected
+        int id;
+        String name;
+        String location;
+        String phonenum;
+        String password;
+        
+        public
+        //overdrive
+        void book(){}
+       
+        void addPlayground(){}
+        
+            /**
+     * setter for the id
+     * @param id used to store id of the user
+     */    
+
+        void setid(int id)
+        {
+            this.id=id;
+        }
+          /**
+     * setter for the name
+     * @param name used to store name of the user
+     */    
+        void setname(String name)
+        {
+            this.name=name;
+        }
+          /**
+     * setter for the location
+     * @param location used to store location of the user
+     */    
+        void setlocation(String location)
+        {
+            this.location=location;
+        }
+          /**
+     * setter for the phonenum
+     * @param phonenum used to store phonenum of the user
+     */    
+        void setphonenum(String phonenum)
+        {
+            this.phonenum=phonenum;
+        }
+          /**
+     * setter for the password
+     * @param password used to store password of the user
+     */    
+        void setpassword(String password)
+        {
+            this.password=password;
+        }
+        /**
+     * getter for the id
+     * @return id , a int contains the id value
+     */
+        int getid()
+        {
+            return id;
+        }
+          /**
+     * getter for the name
+     * @return name , a string contains the name value
+     */
+        String getname()
+        {
+            return name;
+        }
+          /**
+     * getter for the location
+     * @return location, a string contains the location value
+     */
+        String getlocation()
+        {
+            return location;
+        }
+          /**
+     * getter for the phonenum
+     * @return phonenum , a int contains the phonenum value
+     */
+        String getphonenum()
+        {
+            return phonenum;
+        }
+          /**
+     * getter for the password
+     * @return password , a int contains the password value
+     */
+        String getpassword()
+        {
+            return password;
+        }
+        /**
+     * Parameterized constructor used to set the values of the class
+     * @param name used to store the name of the user
+     * @param id used to store the snn of user
+     * @param location used to store the address of the user
+     * @param  phonenum  used to store the phone number of the user
+     * @param password used to store the password of the user
+     *
+     */
+        user(int id,String name,String location,String phonenum,String password)
+        {
+            
+            this.id=id;
+            this.name=name;
+            this.location=location;
+            this.phonenum=phonenum;
+            this.password=password;
+        }
+        
+        
+        public static void main(String args[])
+    	{   
+    			Scanner value = new Scanner(System.in);
+    		   System.out.println("1.create an account");
+    		   System.out.println("type anything to close");
+    		   int par = value.nextInt();
+    		   switch(par) {
+    		   case 1:
+  System.out.println("Enter Name:");
+  String name = value.nextLine();
+  System.out.println( "Enter ID:");
+  int id= value.nextInt();
+  System.out.println( "Enter location:");
+  String location = value.nextLine();
+  System.out.println("Enter phone number:");
+  String phone = value.nextLine();
+  System.out.println("Enter password:");
+  String password = value.nextLine();
+		 		   
+  user User;
+		 		   
+  System.out.println("1.create a player");
+  System.out.println("2.create a playground owner");
+		
+  int x = value.nextInt();
+  System.out.println( x );
+  switch(x) {
+  case (1):
+  User = new player(id, name, location, phone, password);
+  System.out.println("1. book a slot at playground");
+  System.out.println("2. close");
+  x = value.nextInt();
+  switch(x) {
+  case 1:
+ //User.book(User);
+  break;
+  case 2:
+  break;
+  default:
+  System.out.println("ENTER EITHER 1 OR 2");
+	}
+  break;
+  case (2):
+  User = new owner(id, name, location, phone, password);
+  System.out.println("1. add a playground");
+  System.out.println("2. close");
+  x = value.nextInt();
+  switch (x) 
+	{
+	case 2:
+	break;
+	case (1):
+ System.out.println("ENTER PLAYGROUND INFO. :");
+ System.out.println("Enter playground Name:");
+ String playgroundname = value.nextLine();
+			    		      		   
+ System.out.println("Enter ID:");
+ int playgroundid= value.nextInt();
+			    		      		   
+ System.out.println( "Enter location:");
+ String playgroundlocation = value.nextLine();
+			    		      		   
+  System.out.println("Enter price:");
+  String playgroundprice = value.nextLine();
+  //User.addPlayground(playgroundid,playgroundname,playgroundlocation,playgroundprice);   
+ break;
+	}
+ break;
+default:
+System.out.println("ENTER EITHER 1 OR 2");
+		            }		
+  break;
+default:
+break;
+ value.close();
+
+}  
+}
